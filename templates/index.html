@@ -42,17 +42,17 @@
                     <form action="{{ url_for('insert')}}" method="POST">
                         <div class="form-group">
                           <label>Full Name</label>
-                          <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Full Name">
+                          <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Full Name" required>
                         </div>
 
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="text" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email">
+                            <input type="text" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
                         </div>
 
                         <div class="form-group">
                             <label>Phone Number</label>
-                            <input name="phone" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Phone Number">
+                            <input name="phone" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Phone Number" pattern="^((\+91)?|91)?[789][0-9]{9}" required>
                           </div>
 
                           <button type="submit" class="btn btn-primary mb-2">Save</button>
@@ -121,12 +121,12 @@
     
                             <div class="form-group">
                                 <label>Email</label>
-                                <input value="{{row.2}}" type="text" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email">
+                                <input value="{{row.2}}" type="text" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
                             </div>
     
                             <div class="form-group">
                                 <label>Phone Number</label>
-                                <input value="{{row.3}}" name="phone" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Phone Number">
+                                <input value="{{row.3}}" name="phone" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Phone Number" pattern="^((\+91)?|91)?[789][0-9]{9}" required>
                               </div>
     
                               <button type="submit" class="btn btn-success mb-2">Update</button>
